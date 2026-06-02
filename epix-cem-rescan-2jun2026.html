@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SEO Page Re-Scan — /corporate-event-management | Epix · 2 Jun 2026</title>
+<style>
+:root{
+  --navy:#1e3a5f;--gold:#b8860b;--green:#2d6a4f;--amber:#d4740e;
+  --red:#c53030;--cream:#faf9f7;--gray:#4a5568;--lgray:#e2e1dc;
+  --blue:#1d4ed8;--teal:#0f766e;--purple:#6d28d9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0eeea;color:#2d3748;font-size:14px;line-height:1.7}
+
+/* topbar */
+.topbar{background:var(--navy);color:#fff;padding:12px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.25);flex-wrap:wrap;gap:10px}
+.tl{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.tlogo{width:34px;height:34px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}
+.topbar h1{font-size:13.5px;font-weight:600}
+.topbar p{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px}
+.tab-bar{display:flex;gap:4px;flex-wrap:wrap}
+.tb{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);padding:5px 11px;border-radius:6px;font-size:11.5px;cursor:pointer;transition:.15s;white-space:nowrap}
+.tb:hover,.tb.active{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600}
+
+/* layout */
+.layout{display:flex;max-width:1200px;margin:0 auto}
+.sidebar{width:220px;flex-shrink:0;background:#fff;border-right:1px solid var(--lgray);height:calc(100vh - 62px);position:sticky;top:62px;overflow-y:auto;padding:20px 0}
+.sb-group{margin-bottom:4px;padding:0 14px 8px}
+.sb-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#9ca3af;font-weight:600;margin-bottom:6px;padding:0 2px}
+.sb-link{display:flex;align-items:center;gap:7px;padding:6px 10px;border-radius:6px;color:var(--gray);text-decoration:none;font-size:12px;margin-bottom:1px;cursor:pointer;transition:.12s}
+.sb-link:hover,.sb-link.active{background:#f3f2ef;color:var(--navy);font-weight:600}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.d-crit{background:var(--red)}.d-high{background:var(--amber)}.d-med{background:var(--gold)}
+.d-low{background:var(--green)}.d-ok{background:#60a5fa}.d-info{background:#a78bfa}
+.sb-div{border-top:1px solid var(--lgray);margin:10px 14px}
+.main{flex:1;min-width:0;padding:28px 36px 60px}
+.panel{display:none}.panel.on{display:block}
+
+/* score card */
+.scorecard{background:#fff;border:1px solid var(--lgray);border-radius:12px;padding:24px 28px;margin-bottom:24px;display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+.ring-wrap{text-align:center;flex-shrink:0}
+.ring{width:96px;height:96px;border-radius:50%;border:6px solid var(--amber);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 6px}
+.ring .big{font-size:28px;font-weight:800;color:var(--amber);line-height:1}
+.ring .sm{font-size:11px;color:#9ca3af}
+.ring-wrap p{font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:.8px}
+.score-bars{flex:1;min-width:260px}
+.sr{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.sr:last-child{margin-bottom:0}
+.sr-lbl{width:140px;font-size:12px;color:var(--gray);flex-shrink:0}
+.sr-bw{flex:1;height:7px;background:var(--lgray);border-radius:4px;overflow:hidden}
+.sr-b{height:100%;border-radius:4px}
+.bg{background:var(--green)}.ba{background:var(--amber)}.br{background:var(--red)}
+.sr-v{width:70px;font-size:12px;font-weight:700;text-align:right;flex-shrink:0}
+.delta{font-size:10px;margin-left:3px}
+.delta-up{color:var(--green)}.delta-flat{color:var(--gray)}
+.meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;color:var(--gray);line-height:1.7;flex:0 0 200px}
+.meta-grid strong{color:var(--navy)}
+
+/* change summary */
+.change-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.change-card{background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:16px 18px}
+.change-card h3{font-size:13px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.change-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--lgray);font-size:12.5px}
+.change-item:last-child{border-bottom:none}
+.ci-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+.ci-text{flex:1;color:#374151}
+.ci-delta{font-size:11px;font-weight:700;flex-shrink:0}
+
+/* issue cards */
+.issue-card{background:#fff;border:1px solid var(--lgray);border-radius:10px;margin-bottom:14px;overflow:hidden}
+.ic-head{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;cursor:pointer;user-select:none}
+.ic-head:hover{background:#fafafa}
+.ic-badge{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;margin-top:1px}
+.bg-crit{background:var(--red)}.bg-high{background:var(--amber)}.bg-med{background:var(--gold)}.bg-low{background:var(--green)}
+.ic-title{flex:1}
+.ic-title h3{font-size:13.5px;font-weight:600;color:var(--navy);line-height:1.4}
+.ic-title p{font-size:12px;color:var(--gray);margin-top:2px}
+.ic-chev{color:#9ca3af;font-size:14px;flex-shrink:0;margin-top:4px;transition:transform .2s}
+.issue-card.open .ic-chev{transform:rotate(180deg)}
+.ic-body{display:none;padding:0 18px 18px;border-top:1px solid var(--lgray)}
+.ic-body.vis{display:block}
+
+/* section heads */
+.sec-head{margin:28px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--lgray)}
+.sec-head h2{font-size:16px;font-weight:700;color:var(--navy)}
+.sec-head p{font-size:12px;color:var(--gray);margin-top:2px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-size:12px;font-weight:600}
+td{padding:8px 12px;border-bottom:1px solid var(--lgray);vertical-align:top}
+tr:nth-child(even) td{background:#f9f8f6}
+.ok{color:var(--green);font-weight:600}.warn{color:var(--amber);font-weight:600}.fail{color:var(--red);font-weight:600}
+
+/* callouts */
+.callout{border-radius:8px;padding:12px 15px;margin:12px 0;font-size:13px;line-height:1.65}
+.callout strong{display:block;margin-bottom:3px}
+.c-red{background:#fff5f5;border-left:4px solid var(--red)}
+.c-amber{background:#fffbf0;border-left:4px solid var(--amber)}
+.c-green{background:#f0fff6;border-left:4px solid var(--green)}
+.c-blue{background:#eff6ff;border-left:4px solid var(--blue)}
+.c-navy{background:#f0f4ff;border-left:4px solid var(--navy)}
+.c-teal{background:#f0fdfa;border-left:4px solid var(--teal)}
+
+/* code */
+pre{background:#1a1a2e;color:#e2e8f0;border-radius:8px;padding:14px;font-family:'Courier New',monospace;font-size:12px;line-height:1.6;overflow-x:auto;margin:10px 0;white-space:pre-wrap;word-break:break-word}
+code{background:#f1f0ed;border-radius:3px;padding:1px 5px;font-family:'Courier New',monospace;font-size:11.5px;color:var(--navy)}
+.copy-btn{float:right;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:3px 10px;border-radius:4px;font-size:11px;cursor:pointer;margin-bottom:6px}
+.copy-btn:hover{background:rgba(255,255,255,.25)}
+
+/* badges */
+.badge{display:inline-block;border-radius:4px;padding:2px 8px;font-size:10.5px;font-weight:700;color:#fff}
+.b-red{background:var(--red)}.b-amber{background:var(--amber)}.b-green{background:var(--green)}
+.b-blue{background:var(--blue)}.b-navy{background:var(--navy)}.b-gold{background:var(--gold)}
+.b-teal{background:var(--teal)}.b-purple{background:var(--purple)}
+
+/* kw density bar */
+.kw-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--lgray);font-size:12.5px}
+.kw-row:last-child{border-bottom:none}
+.kw-name{flex:1;color:#374151}
+.kw-cnt{width:28px;text-align:center;font-weight:700;color:var(--navy)}
+.kw-bw{width:100px;height:5px;background:var(--lgray);border-radius:3px;overflow:hidden;flex-shrink:0}
+.kw-b{height:100%;border-radius:3px}
+.kw-pct{width:36px;font-size:11px;color:var(--gray);text-align:right;flex-shrink:0}
+
+/* fix table */
+.fix-priority{width:80px}
+
+/* progress ring (miniature) */
+.mini-ring{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;border:3px solid}
+.mr-green{border-color:var(--green);color:var(--green)}
+.mr-amber{border-color:var(--amber);color:var(--amber)}
+.mr-red{border-color:var(--red);color:var(--red)}
+
+/* pill counts */
+.pill-row{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.pill{background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:12px 18px;text-align:center;flex:1;min-width:90px}
+.pill .pn{font-size:26px;font-weight:800;line-height:1}
+.pill .pl{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--gray);margin-top:3px}
+.pc .pn{color:var(--red)}.pc{border-top:4px solid var(--red)}
+.ph .pn{color:var(--amber)}.ph{border-top:4px solid var(--amber)}
+.pm .pn{color:var(--gold)}.pm{border-top:4px solid var(--gold)}
+.pl2 .pn{color:var(--green)}.pl2{border-top:4px solid var(--green)}
+
+/* sidebar scroll */
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--lgray);border-radius:2px}
+
+@media(max-width:900px){.sidebar{display:none}.main{padding:18px 14px 40px}.change-grid{grid-template-columns:1fr}.meta-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="tl">
+    <div class="tlogo">E</div>
+    <div>
+      <h1>SEO Page Re-Scan — /corporate-event-management</h1>
+      <p>epixentertainment.com &nbsp;·&nbsp; Live scan: 2 Jun 2026 &nbsp;·&nbsp; Previous: 1 Jun 2026</p>
+    </div>
+  </div>
+  <div class="tab-bar">
+    <button class="tb active" onclick="sw('overview')">Overview</button>
+    <button class="tb" onclick="sw('issues')">Issues</button>
+    <button class="tb" onclick="sw('keywords')">Keywords</button>
+    <button class="tb" onclick="sw('technical')">Technical</button>
+    <button class="tb" onclick="sw('schema')">Schema</button>
+    <button class="tb" onclick="sw('fixes')">Fix Queue</button>
+  </div>
+</div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sb-group">
+    <div class="sb-lbl">Overview</div>
+    <div class="sb-link" onclick="sw('overview');setActive(this)"><span class="dot d-info"></span>Score Card</div>
+    <div class="sb-link" onclick="sw('overview');setActive(this)"><span class="dot d-ok"></span>What Changed</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-group">
+    <div class="sb-lbl">Critical</div>
+    <div class="sb-link" onclick="sw('issues');openCard('c1');setActive(this)"><span class="dot d-crit"></span>Title phrasing + &amp;</div>
+    <div class="sb-link" onclick="sw('issues');openCard('c2');setActive(this)"><span class="dot d-crit"></span>HR/payroll H3s still live</div>
+    <div class="sb-link" onclick="sw('issues');openCard('c3');setActive(this)"><span class="dot d-crit"></span>Duplicate FAQ Q8/Q9</div>
+    <div class="sb-link" onclick="sw('issues');openCard('c4');setActive(this)"><span class="dot d-crit"></span>Heading order broken</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-group">
+    <div class="sb-lbl">High</div>
+    <div class="sb-link" onclick="sw('issues');openCard('h1');setActive(this)"><span class="dot d-high"></span>OG title whitespace</div>
+    <div class="sb-link" onclick="sw('issues');openCard('h2');setActive(this)"><span class="dot d-high"></span>H2 = "15+"</div>
+    <div class="sb-link" onclick="sw('issues');openCard('h3');setActive(this)"><span class="dot d-high"></span>12 dead # links</div>
+    <div class="sb-link" onclick="sw('issues');openCard('h4');setActive(this)"><span class="dot d-high"></span>Images: alt + dims</div>
+    <div class="sb-link" onclick="sw('issues');openCard('h5');setActive(this)"><span class="dot d-high"></span>Triple Bootstrap</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-group">
+    <div class="sb-lbl">Medium</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m1');setActive(this)"><span class="dot d-med"></span>Meta description</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m2');setActive(this)"><span class="dot d-med"></span>Robots meta order</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m3');setActive(this)"><span class="dot d-med"></span>OG description</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m4');setActive(this)"><span class="dot d-med"></span>FAQ numbering</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m5');setActive(this)"><span class="dot d-med"></span>Missing KW</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m6');setActive(this)"><span class="dot d-med"></span>Semantic gaps</div>
+    <div class="sb-link" onclick="sw('issues');openCard('m7');setActive(this)"><span class="dot d-med"></span>Schema fields</div>
+  </div>
+  <div class="sb-div"></div>
+  <div class="sb-group">
+    <div class="sb-lbl">Tools</div>
+    <div class="sb-link" onclick="sw('keywords');setActive(this)"><span class="dot d-info"></span>Keyword table</div>
+    <div class="sb-link" onclick="sw('technical');setActive(this)"><span class="dot d-info"></span>Technical signals</div>
+    <div class="sb-link" onclick="sw('schema');setActive(this)"><span class="dot d-info"></span>Schema audit</div>
+    <div class="sb-link" onclick="sw('fixes');setActive(this)"><span class="dot d-ok"></span>Fix queue</div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- ═══════════════════════════════════════════ OVERVIEW -->
+<div id="tab-overview" class="panel on">
+
+  <!-- Score card -->
+  <div class="scorecard">
+    <div class="ring-wrap">
+      <div class="ring">
+        <span class="big">58</span>
+        <span class="sm">/ 100</span>
+      </div>
+      <p>Overall Score</p>
+      <div style="margin-top:8px;font-size:11px;color:var(--green);font-weight:700">▲ +7 from 51</div>
+    </div>
+
+    <div class="score-bars">
+      <div class="sr">
+        <span class="sr-lbl">On-Page SEO</span>
+        <div class="sr-bw"><div class="sr-b ba" style="width:64%"></div></div>
+        <span class="sr-v warn">64 <span class="delta delta-up">▲+9</span></span>
+      </div>
+      <div class="sr">
+        <span class="sr-lbl">Content Quality</span>
+        <div class="sr-bw"><div class="sr-b ba" style="width:74%"></div></div>
+        <span class="sr-v warn">74 <span class="delta delta-up">▲+9</span></span>
+      </div>
+      <div class="sr">
+        <span class="sr-lbl">Technical</span>
+        <div class="sr-bw"><div class="sr-b br" style="width:42%"></div></div>
+        <span class="sr-v fail">42 <span class="delta delta-flat">—</span></span>
+      </div>
+      <div class="sr">
+        <span class="sr-lbl">Schema</span>
+        <div class="sr-bw"><div class="sr-b ba" style="width:58%"></div></div>
+        <span class="sr-v warn">58 <span class="delta delta-up">▲+8</span></span>
+      </div>
+      <div class="sr">
+        <span class="sr-lbl">Images</span>
+        <div class="sr-bw"><div class="sr-b br" style="width:18%"></div></div>
+        <span class="sr-v fail">18 <span class="delta delta-flat">—</span></span>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div><strong>Title</strong> Corporate Event Management service &amp; company in Chennai</div>
+      <div><strong>Title length</strong> <span class="warn">59 chars (odd phrasing)</span></div>
+      <div><strong>H1 count</strong> <span class="ok">1 ✓</span></div>
+      <div><strong>Word count</strong> <span class="ok">~1,851 ▲</span></div>
+      <div><strong>Keywords present</strong> <span class="ok">9 / 10 ▲</span></div>
+      <div><strong>Schema image</strong> <span class="ok">200 OK ✓ (fixed)</span></div>
+      <div><strong>Dead # links</strong> <span class="fail">12</span></div>
+      <div><strong>FAQ questions</strong> <span class="warn">9 (1 duplicate)</span></div>
+    </div>
+  </div>
+
+  <!-- Issue counts -->
+  <div class="pill-row">
+    <div class="pill pc"><div class="pn">4</div><div class="pl">Critical</div></div>
+    <div class="pill ph"><div class="pn">5</div><div class="pl">High</div></div>
+    <div class="pill pm"><div class="pn">7</div><div class="pl">Medium</div></div>
+    <div class="pill pl2"><div class="pn">4</div><div class="pl">Low</div></div>
+  </div>
+
+  <!-- What changed -->
+  <div class="sec-head"><h2>What Changed Since Last Scan</h2><p>1 Jun 2026 → 2 Jun 2026</p></div>
+
+  <div class="change-grid">
+    <div class="change-card">
+      <h3><span style="color:var(--green)">✅</span> Fixed / Improved</h3>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>Schema image URL fixed</strong> — was <code>logo.png</code> (404), now <code>epix-logo-01.webp</code> (200 OK)</div><span class="ci-delta" style="color:var(--green)">High</span></div>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>Keyword coverage</strong> — 5/10 → 9/10 target keywords now present on page</div><span class="ci-delta" style="color:var(--green)">+4 KW</span></div>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>Word count</strong> — 1,580 → 1,851 words (+17% content depth)</div><span class="ci-delta" style="color:var(--green)">+271</span></div>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>FAQ questions updated</strong> — 7 of 8 now target recommended queries (agency in Chennai, cost, planners vs in-house)</div><span class="ci-delta" style="color:var(--green)">7/8</span></div>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>Semantic terms added</strong> — venue, logistics, catering, on-site, vendor, hybrid, virtual, attendees all now present</div><span class="ci-delta" style="color:var(--green)">+8 terms</span></div>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>Testimonial attribution</strong> — now shows "Sharadha Gopalakrishnan, HR Head" (E-E-A-T improvement)</div><span class="ci-delta" style="color:var(--green)">E-E-A-T</span></div>
+      <div class="change-item"><span class="ci-icon">✅</span><div class="ci-text"><strong>Key density keywords all in natural range</strong> — none over 0.6%, no over-optimisation flags</div><span class="ci-delta" style="color:var(--green)">Clean</span></div>
+    </div>
+
+    <div class="change-card">
+      <h3><span style="color:var(--red)">❌</span> Still Open / Regressed</h3>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>Title phrasing regressed</strong> — now "service &amp; company in Chennai" (unnatural, HTML entity issue)</div><span class="ci-delta" style="color:var(--red)">New</span></div>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>HR/payroll H3s still live</strong> — Payroll Solutions, Compliance Assurance, Employee Development, Workforce Strategy</div><span class="ci-delta" style="color:var(--red)">Persist</span></div>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>Duplicate FAQ added</strong> — Q9 "how early... management company" duplicates Q8 (was not in previous version)</div><span class="ci-delta" style="color:var(--red)">New</span></div>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>OG/Twitter title whitespace</strong> — leading + trailing space still present on both</div><span class="ci-delta" style="color:var(--red)">Persist</span></div>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>Service card links still wrong</strong> — Product Launches → /internal-communication-events, Awards → /health-wellness</div><span class="ci-delta" style="color:var(--red)">Persist</span></div>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>Images unchanged</strong> — 21 empty alt, 118 no dimensions, 0 lazy-loaded</div><span class="ci-delta" style="color:var(--red)">Persist</span></div>
+      <div class="change-item"><span class="ci-icon">❌</span><div class="ci-text"><strong>Performance stack unchanged</strong> — triple Bootstrap, 9 blocking CSS, 7 blocking JS, 0 preload hints</div><span class="ci-delta" style="color:var(--red)">Persist</span></div>
+    </div>
+  </div>
+
+</div><!-- /overview -->
+
+<!-- ═══════════════════════════════════════════ ISSUES -->
+<div id="tab-issues" class="panel">
+
+  <div class="sec-head"><h2>All Issues</h2><p>Critical → High → Medium → Low</p></div>
+
+  <!-- CRITICAL -->
+  <div style="display:flex;align-items:center;gap:8px;margin:20px 0 12px">
+    <span class="badge b-red">● Critical</span>
+    <span style="font-size:13px;font-weight:700;color:var(--navy)">4 Issues</span>
+  </div>
+
+  <!-- C1 -->
+  <div id="c1" class="issue-card open">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-crit">C1</div>
+      <div class="ic-title">
+        <h3>Title Tag Regressed — "service &amp; company" Phrasing + HTML Entity</h3>
+        <p>New title is less keyword-optimised than the previous version — and uses &amp;amp; as visible text</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body vis">
+      <table style="margin-top:12px">
+        <tr><th>Version</th><th>Title</th><th>Length</th><th>Issue</th></tr>
+        <tr><td>Previous scan</td><td>Top Corporate Event Management Company in Chennai | Epix</td><td>56</td><td class="warn">⚠ "Top" opener</td></tr>
+        <tr><td><strong>Current (live)</strong></td><td>Corporate Event Management service &amp; company in Chennai</td><td>59</td><td class="fail">❌ "service &amp; company" unnatural · &amp; entity in title</td></tr>
+        <tr><td><strong>Recommended</strong></td><td><strong>Corporate Event Management Company in Chennai | Epix</strong></td><td class="ok">52</td><td class="ok">✓ Primary keyword · clean · brand at end</td></tr>
+      </table>
+      <div class="callout c-red" style="margin-top:10px">
+        <strong>Why this matters:</strong> The title tag is the single highest-weight on-page ranking signal. "Service & company in Chennai" is not a natural search query anyone types. The primary keyword "Corporate Event Management Company in Chennai" should appear verbatim, cleanly, in position 1.
+      </div>
+      <pre>&lt;title&gt;Corporate Event Management Company in Chennai | Epix&lt;/title&gt;</pre>
+    </div>
+  </div>
+
+  <!-- C2 -->
+  <div id="c2" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-crit">C2</div>
+      <div class="ic-title">
+        <h3>HR/Payroll H3 Headings Still Live in "Why Choose" Section</h3>
+        <p>4 wrong-industry headings remain on the live page — associating it with payroll software verticals</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <div class="callout c-red">
+        <strong>Still live on page right now:</strong> These H3s appear inside the "Partner With a Top Corporate Event Planner" section and signal to Google's NLP model that this is an HR/payroll page — not a corporate event management page.
+      </div>
+      <table>
+        <tr><th>Current H3 (Wrong Industry)</th><th>Replace With</th></tr>
+        <tr><td class="fail">Payroll Solutions</td><td class="ok">Creative &amp; Experienced Event Team</td></tr>
+        <tr><td class="fail">Compliance Assurance</td><td class="ok">Complete On-Ground Event Execution</td></tr>
+        <tr><td class="fail">Employee Development</td><td class="ok">Vendor &amp; Logistics Management</td></tr>
+        <tr><td class="fail">Workforce Strategy</td><td class="ok">1,500+ Events Successfully Delivered</td></tr>
+      </table>
+      <div class="callout c-amber" style="margin-top:10px">This is the most damaging unfixed content issue on the page. Every additional day these headings are live costs topical authority.</div>
+    </div>
+  </div>
+
+  <!-- C3 -->
+  <div id="c3" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-crit">C3</div>
+      <div class="ic-title">
+        <h3>Duplicate FAQ — Q8 and Q9 Both Ask "How Early to Book"</h3>
+        <p>A 9th FAQ question was added as a near-identical variant of Q8, not a replacement</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table style="margin-top:12px">
+        <tr><th>Q#</th><th>Question Text</th><th>Status</th></tr>
+        <tr><td>Q8</td><td>How early should I book a corporate event management <strong>agency</strong> in Chennai?</td><td class="ok">✓ Keep</td></tr>
+        <tr><td>Q9</td><td>How early should I book a corporate event management <strong>company</strong> in Chennai?</td><td class="fail">❌ Remove — duplicate intent</td></tr>
+      </table>
+      <div class="callout c-red" style="margin-top:10px">
+        <strong>FAQ schema impact:</strong> Two questions with identical intent in a FAQPage block may trigger a duplicate-content flag in Google's Rich Results Test. Remove Q9 entirely — or replace it with a new, distinct question such as "Can Epix manage virtual and hybrid corporate events?" which is currently missing from the FAQ.
+      </div>
+      <pre>/* Replace Q9 with a new question — suggested: */
+{
+  "@type": "Question",
+  "name": "Can Epix manage virtual and hybrid corporate events?",
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Epix produces hybrid and virtual corporate events with live-streaming, interactive Q&amp;A tools, virtual breakout rooms, and branded digital environments — seamlessly connecting in-person and remote attendees."
+  }
+}</pre>
+    </div>
+  </div>
+
+  <!-- C4 -->
+  <div id="c4" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-crit">C4</div>
+      <div class="ic-title">
+        <h3>Heading Hierarchy Broken — H3/H5/H6 Appear Before First H1</h3>
+        <p>Document outline is unparseable — Google cannot determine primary topic from heading structure</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <p style="font-size:13px;margin:12px 0 8px">First 7 headings in current DOM order:</p>
+      <table>
+        <tr><th>Position</th><th>Tag</th><th>Text</th><th>Problem</th></tr>
+        <tr><td>1</td><td><code>H3</code></td><td>Get Instant Call</td><td class="fail">H3 before any H1</td></tr>
+        <tr><td>2</td><td><code>H3</code></td><td>Your Event Our Expertise Let's Make It Happen!</td><td class="fail">H3 before H1</td></tr>
+        <tr><td>3</td><td><code>H5</code></td><td>Best Event Management Company In Chennai</td><td class="fail">H5 before H1</td></tr>
+        <tr><td>4</td><td><code>H3</code></td><td>Get Quote</td><td class="fail">H3 before H1</td></tr>
+        <tr><td>5</td><td><code>H6</code></td><td>"Strategic Corporate Event Planners in Chennai"</td><td class="fail">H6 before H1 — decorative quote</td></tr>
+        <tr><td>6</td><td><code>H1</code></td><td>Corporate Event Management Company in Chennai</td><td class="ok">✓ Correct H1 (finally)</td></tr>
+        <tr><td>7</td><td><code>H2</code></td><td>15+</td><td class="fail">Number as heading — stats counter</td></tr>
+      </table>
+      <div class="callout c-amber" style="margin-top:10px">
+        The sticky CTA bar ("Get Instant Call"), modal form headings, and pop-up quote form all render heading tags before the page H1. Wrap these elements in <code>&lt;div&gt;</code> or <code>&lt;p&gt;</code> tags instead — they are UI components, not document-structure headings.
+      </div>
+    </div>
+  </div>
+
+  <!-- HIGH -->
+  <div style="display:flex;align-items:center;gap:8px;margin:28px 0 12px">
+    <span class="badge b-amber">● High</span>
+    <span style="font-size:13px;font-weight:700;color:var(--navy)">5 Issues</span>
+  </div>
+
+  <!-- H1 -->
+  <div id="h1" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-high">H1</div>
+      <div class="ic-title">
+        <h3>OG Title and Twitter Title Still Have Leading + Trailing Whitespace</h3>
+        <p>Both social meta tags unchanged — whitespace persists from original template</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <pre>/* Current (broken) — note the spaces: */
+&lt;meta property="og:title" content=" Top Corporate Event Management Company in Chennai | Epix "&gt;
+                                    ↑ space                                                ↑ space
+
+/* Fixed: */
+&lt;meta property="og:title" content="Corporate Event Management Company in Chennai | Epix"&gt;
+&lt;meta name="twitter:title" content="Corporate Event Management Company in Chennai | Epix"&gt;</pre>
+      <div class="callout c-amber">Also update the OG description (currently still the old base copy) and add <code>og:locale="en_IN"</code> and <code>twitter:site="@eventguru77"</code> while making this change.</div>
+    </div>
+  </div>
+
+  <!-- H2 -->
+  <div id="h2" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-high">H2</div>
+      <div class="ic-title">
+        <h3>&lt;h2&gt;15+&lt;/h2&gt; — Stats Counter Still Wrapped in Heading Tag</h3>
+        <p>"15+" is the second-most important topic signal on the page per Google's heading hierarchy</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <pre>/* Current (wrong): */
+&lt;h2&gt;15+&lt;/h2&gt;
+
+/* Fix — wrap in styled span, not heading: */
+&lt;div class="stat-number"&gt;15+&lt;/div&gt;
+&lt;p class="stat-label"&gt;Years of Experience&lt;/p&gt;</pre>
+    </div>
+  </div>
+
+  <!-- H3 -->
+  <div id="h3" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-high">H3</div>
+      <div class="ic-title">
+        <h3>12 Dead # Links + 8 Generic "Read More" Anchors — All Service Cards Unfixed</h3>
+        <p>Service card destinations still wrong — Product Launches goes to Internal Comms, Awards to Health &amp; Wellness</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table>
+        <tr><th>Service Card</th><th>Live Link</th><th>Status</th><th>Correct Link</th></tr>
+        <tr><td>Corporate Annual Day</td><td><code>#</code></td><td class="fail">❌ Dead</td><td><code>/corporate-event-management#annual-day</code></td></tr>
+        <tr><td>Product Launches</td><td><code>/internal-communication-events</code></td><td class="fail">❌ Wrong page</td><td><code>/brand-launches</code></td></tr>
+        <tr><td>Team-Building Retreats</td><td><code>/recognition-motivation</code></td><td class="fail">❌ Wrong page</td><td><code>/employee-engagement</code></td></tr>
+        <tr><td>Conferences &amp; Business Meets</td><td><code>/learning-development</code></td><td class="warn">⚠ Acceptable</td><td><code>/learning-development</code></td></tr>
+        <tr><td>Awards &amp; Recognition</td><td><code>/health-wellness</code></td><td class="fail">❌ Wrong page</td><td><code>/recognition-motivation</code></td></tr>
+        <tr><td>Cultural Events</td><td><code>/additional-service</code></td><td class="ok">✓ OK</td><td>—</td></tr>
+        <tr><td>Trade Shows</td><td><code>#</code></td><td class="fail">❌ Dead</td><td><code>/dealers-meets-trade-show</code></td></tr>
+        <tr><td>Festive Parties</td><td><code>#</code></td><td class="fail">❌ Dead</td><td><code>/additional-service</code></td></tr>
+      </table>
+      <div class="callout c-red" style="margin-top:10px">All 8 "Read More" anchor texts should also be changed to descriptive text: "View Product Launch Services →", "Explore Team Building →" etc.</div>
+    </div>
+  </div>
+
+  <!-- H4 -->
+  <div id="h4" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-high">H4</div>
+      <div class="ic-title">
+        <h3>Images: 21 Empty Alt Text · 118 Without Dimensions · 0 Lazy-Loaded</h3>
+        <p>Unchanged from previous scan — CLS risk on every image, LCP harm from no lazy loading</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table>
+        <tr><th>Metric</th><th>Count</th><th>Status</th></tr>
+        <tr><td>Total images</td><td>118</td><td>—</td></tr>
+        <tr><td>Native <code>loading="lazy"</code></td><td>0</td><td class="fail">❌ All load eagerly</td></tr>
+        <tr><td>Empty <code>alt=""</code></td><td>21</td><td class="fail">❌ Screen reader + image-search failure</td></tr>
+        <tr><td>No <code>width</code>/<code>height</code></td><td>118 / 118</td><td class="fail">❌ Every image = CLS risk</td></tr>
+      </table>
+      <pre>/* Mass fix — apply to all non-hero images: */
+&lt;img src="..." alt="[descriptive text]" loading="lazy" width="W" height="H"&gt;
+
+/* Hero image (do NOT lazy-load): */
+&lt;link rel="preload" as="image" href="assets/images/service-page/hr-page/corporate-event-management-banner.webp"&gt;</pre>
+    </div>
+  </div>
+
+  <!-- H5 -->
+  <div id="h5" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-high">H5</div>
+      <div class="ic-title">
+        <h3>Triple Bootstrap + 9 Blocking CSS + 7 Blocking Scripts — Performance Unchanged</h3>
+        <p>All render-blocking resource issues persist — LCP and INP will remain poor</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table>
+        <tr><th>Signal</th><th>Count</th><th>Status</th></tr>
+        <tr><td>Render-blocking CSS files</td><td>9</td><td class="fail">❌</td></tr>
+        <tr><td>Synchronous (blocking) scripts</td><td>7</td><td class="fail">❌</td></tr>
+        <tr><td>Async/deferred scripts</td><td>2</td><td class="ok">✓</td></tr>
+        <tr><td>Preload hints</td><td>0</td><td class="fail">❌</td></tr>
+        <tr><td>Bootstrap 4.5.2 (stackpath)</td><td>1 JS</td><td class="fail">❌ Redundant</td></tr>
+        <tr><td>Bootstrap 5.0.2 (jsdelivr)</td><td>1 CSS + 1 JS</td><td class="fail">❌ Redundant</td></tr>
+        <tr><td>Bootstrap 5.3.0 (jsdelivr)</td><td>1 CSS</td><td class="ok">✓ Keep only this</td></tr>
+        <tr><td>Owl Carousel CSS</td><td>2 copies</td><td class="fail">❌ Loaded twice (local + CDN)</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- MEDIUM -->
+  <div style="display:flex;align-items:center;gap:8px;margin:28px 0 12px">
+    <span class="badge b-gold">● Medium</span>
+    <span style="font-size:13px;font-weight:700;color:var(--navy)">7 Issues</span>
+  </div>
+
+  <div id="m1" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M1</div>
+      <div class="ic-title">
+        <h3>Meta Description Generic and Below 150 Characters</h3>
+        <p>Unchanged base copy — no trust stats, no CTA, no service specificity</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <div class="callout c-amber">
+        <strong>Current (142 chars):</strong> "Epix Entertainment is a top corporate event management company in Chennai, planning and organising successful corporate events with expertise."
+      </div>
+      <div class="callout c-green">
+        <strong>Recommended (155 chars):</strong> "Epix Entertainment — Chennai's trusted corporate event management agency since 2009. Conferences, annual days, product launches &amp; brand events. 1,500+ events. Get a free quote."
+      </div>
+      <pre>&lt;meta name="description" content="Epix Entertainment — Chennai's trusted corporate event management agency since 2009. Conferences, annual days, product launches &amp;amp; brand events. 1,500+ events. Get a free quote."&gt;</pre>
+    </div>
+  </div>
+
+  <div id="m2" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M2</div>
+      <div class="ic-title">
+        <h3>Robots Meta Non-Standard: "follow, index" Should Be "index, follow"</h3>
+        <p>Minor but signals template inconsistency across all pages on the site</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <pre>/* Current: */  &lt;meta name="robots" content="follow, index"&gt;
+/* Fix:     */  &lt;meta name="robots" content="index, follow"&gt;</pre>
+      <p style="font-size:12.5px;color:var(--gray);margin-top:8px">Change in the global template so all pages are fixed at once — not just this page.</p>
+    </div>
+  </div>
+
+  <div id="m3" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M3</div>
+      <div class="ic-title">
+        <h3>OG Description Still Serves the Old Generic Base Copy</h3>
+        <p>og:description should be independently compelling for social shares — it currently isn't</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <pre>&lt;meta property="og:description" content="Chennai's trusted corporate event management agency since 2009. Conferences, product launches, annual days &amp;amp; brand events. 15+ years, 1,500+ events, 75+ brands."&gt;
+&lt;meta property="og:locale" content="en_IN"&gt;
+&lt;meta name="twitter:site" content="@eventguru77"&gt;</pre>
+    </div>
+  </div>
+
+  <div id="m4" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M4</div>
+      <div class="ic-title">
+        <h3>FAQ Numbering Inconsistent — Q4, Q6, Q7 Missing Leading Zeros</h3>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table>
+        <tr><th>Current</th><th>Fix</th></tr>
+        <tr><td class="fail">4.What types...</td><td class="ok">04. What types...</td></tr>
+        <tr><td class="fail">6.Do your corporate...</td><td class="ok">06. Do your corporate...</td></tr>
+        <tr><td class="fail">7.How much...</td><td class="ok">07. How much...</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="m5" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M5</div>
+      <div class="ic-title">
+        <h3>"corporate event planning agency" — Only Target Keyword Still Missing (0 occurrences)</h3>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <div class="callout c-amber">Add once, naturally, in the brand experience section (Section 5) body copy:</div>
+      <pre>/* Add to Section 5 body paragraph: */
+"As a full-service &lt;strong&gt;corporate event planning agency&lt;/strong&gt; in Chennai,
+we go beyond logistics — we build narratives, design environments, and create
+moments that strengthen your brand."</pre>
+    </div>
+  </div>
+
+  <div id="m6" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M6</div>
+      <div class="ic-title">
+        <h3>3 Semantic Co-occurrence Terms Still Missing: audio visual, ROI, checklist</h3>
+        <p>NLP models expect these terms on any corporate event management page</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table>
+        <tr><th>Missing Term</th><th>Where to Add</th><th>Example</th></tr>
+        <tr><td><code>audio visual</code> / <code>AV</code></td><td>Conferences card description</td><td>"…AV production, delegate registration, and live streaming included."</td></tr>
+        <tr><td><code>ROI</code></td><td>Brand Experience bullets or Why Choose</td><td>"Measurable Post-Event ROI &amp; Reporting"</td></tr>
+        <tr><td><code>checklist</code></td><td>FAQ Q8 answer</td><td>"…we build a full event checklist covering every deliverable…"</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="m7" class="issue-card">
+    <div class="ic-head" onclick="tog(this)">
+      <div class="ic-badge bg-med">M7</div>
+      <div class="ic-title">
+        <h3>Schema: logo, aggregateRating, priceRange, Service, BreadcrumbList All Still Missing</h3>
+        <p>Schema image URL is now fixed (200 ✓) — remaining 5 fields/types not yet added</p>
+      </div>
+      <span class="ic-chev">▼</span>
+    </div>
+    <div class="ic-body">
+      <table>
+        <tr><th>Field / Type</th><th>Status</th><th>Value</th></tr>
+        <tr><td><code>image</code></td><td class="ok">✓ Fixed — 200 OK</td><td>epix-logo-01.webp</td></tr>
+        <tr><td><code>logo</code> (ImageObject)</td><td class="fail">✗ Missing</td><td>Enables Knowledge Panel logo</td></tr>
+        <tr><td><code>aggregateRating</code></td><td class="fail">✗ Missing</td><td>Enables Google star snippets</td></tr>
+        <tr><td><code>priceRange</code></td><td class="fail">✗ Missing</td><td>Add <code>"₹₹₹"</code></td></tr>
+        <tr><td><code>Service</code> schema block</td><td class="fail">✗ Missing</td><td>Describes the specific service</td></tr>
+        <tr><td><code>BreadcrumbList</code></td><td class="fail">✗ Missing</td><td>Home › Corporate Event Management in SERP</td></tr>
+      </table>
+      <p style="font-size:12.5px;color:var(--gray);margin-top:8px">All ready-to-paste schema blocks are in the Schema tab.</p>
+    </div>
+  </div>
+
+</div><!-- /issues -->
+
+<!-- ═══════════════════════════════════════════ KEYWORDS -->
+<div id="tab-keywords" class="panel">
+  <div class="sec-head"><h2>Keyword Density — Live Page</h2><p>All 10 target keywords measured against ~1,851 words</p></div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:18px 20px;margin-bottom:20px">
+    <div class="kw-row">
+      <span class="kw-name"><strong>corporate event management company in chennai</strong> <span class="badge b-navy" style="font-size:9px">Primary</span></span>
+      <span class="kw-cnt">10</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:54%"></div></div>
+      <span class="kw-pct">0.54%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event planners</span>
+      <span class="kw-cnt">9</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:49%"></div></div>
+      <span class="kw-pct">0.49%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event management agency</span>
+      <span class="kw-cnt">5</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:27%"></div></div>
+      <span class="kw-pct">0.27%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event management agency in chennai</span>
+      <span class="kw-cnt">4</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:22%"></div></div>
+      <span class="kw-pct">0.22%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event planners in chennai</span>
+      <span class="kw-cnt">4</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:22%"></div></div>
+      <span class="kw-pct">0.22%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event planning services in chennai</span>
+      <span class="kw-cnt">3</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:16%"></div></div>
+      <span class="kw-pct">0.16%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event management service</span>
+      <span class="kw-cnt">3</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:16%"></div></div>
+      <span class="kw-pct">0.16%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event planning services</span>
+      <span class="kw-cnt">3</span>
+      <div class="kw-bw"><div class="kw-b bg" style="width:16%"></div></div>
+      <span class="kw-pct">0.16%</span>
+      <span class="badge b-green" style="margin-left:6px">✓</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name">corporate event organisers in chennai</span>
+      <span class="kw-cnt">2</span>
+      <div class="kw-bw"><div class="kw-b ba" style="width:11%"></div></div>
+      <span class="kw-pct">0.11%</span>
+      <span class="badge b-amber" style="margin-left:6px">⚠ Low</span>
+    </div>
+    <div class="kw-row">
+      <span class="kw-name"><strong>corporate event planning agency</strong></span>
+      <span class="kw-cnt">0</span>
+      <div class="kw-bw"><div class="kw-b br" style="width:0%"></div></div>
+      <span class="kw-pct">0%</span>
+      <span class="badge b-red" style="margin-left:6px">⛔ Missing</span>
+    </div>
+  </div>
+
+  <div class="callout c-green">
+    <strong>9/10 target keywords now present</strong> — all in natural density range (none over 0.55%). Only "corporate event planning agency" is missing. Add it once in the brand experience section body copy.
+  </div>
+
+  <div class="sec-head" style="margin-top:20px"><h2>Semantic Term Coverage</h2></div>
+  <table>
+    <tr><th>Term</th><th>Count</th><th>Status</th></tr>
+    <tr><td>venue</td><td>6</td><td class="ok">✓</td></tr>
+    <tr><td>vendor</td><td>9</td><td class="ok">✓</td></tr>
+    <tr><td>on-site</td><td>7</td><td class="ok">✓</td></tr>
+    <tr><td>logistics</td><td>5</td><td class="ok">✓</td></tr>
+    <tr><td>catering</td><td>3</td><td class="ok">✓</td></tr>
+    <tr><td>hybrid</td><td>2</td><td class="ok">✓</td></tr>
+    <tr><td>registration</td><td>1</td><td class="ok">✓</td></tr>
+    <tr><td>attendees</td><td>1</td><td class="ok">✓</td></tr>
+    <tr><td>virtual</td><td>1</td><td class="ok">✓</td></tr>
+    <tr><td>budget</td><td>1</td><td class="ok">✓</td></tr>
+    <tr><td><strong>audio visual / AV</strong></td><td>0</td><td class="fail">⛔ Missing</td></tr>
+    <tr><td><strong>ROI</strong></td><td>0</td><td class="fail">⛔ Missing</td></tr>
+    <tr><td><strong>checklist</strong></td><td>0</td><td class="fail">⛔ Missing</td></tr>
+  </table>
+
+</div><!-- /keywords -->
+
+<!-- ═══════════════════════════════════════════ TECHNICAL -->
+<div id="tab-technical" class="panel">
+  <div class="sec-head"><h2>Technical Signals</h2><p>Meta, OG, Twitter, performance, crawlability</p></div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:18px 20px;margin-bottom:16px">
+    <table>
+      <tr><th>Element</th><th>Current Value</th><th>Length</th><th>Status</th></tr>
+      <tr><td><code>&lt;title&gt;</code></td><td>Corporate Event Management service &amp; company in Chennai</td><td class="warn">59</td><td class="fail">❌ Odd phrasing — fix needed</td></tr>
+      <tr><td><code>meta description</code></td><td>Epix Entertainment is a top corporate event management company in Chennai, planning and organising successful corporate events with expertise.</td><td class="warn">142</td><td class="warn">⚠ Generic, no CTA, no stats</td></tr>
+      <tr><td><code>canonical</code></td><td>https://epixentertainment.com/corporate-event-management</td><td>—</td><td class="ok">✓</td></tr>
+      <tr><td><code>robots</code></td><td>follow, index</td><td>—</td><td class="warn">⚠ Non-standard order</td></tr>
+      <tr><td><code>html lang</code></td><td>en</td><td>—</td><td class="ok">✓</td></tr>
+      <tr><td><code>H1 count</code></td><td>1</td><td>—</td><td class="ok">✓</td></tr>
+      <tr><td><code>og:title</code></td><td>" Top Corporate Event Management Company in Chennai | Epix "</td><td>—</td><td class="fail">❌ Leading + trailing whitespace</td></tr>
+      <tr><td><code>og:image</code></td><td>corporate-event-management-banner.webp</td><td>—</td><td class="ok">✓ 200 OK</td></tr>
+      <tr><td><code>og:locale</code></td><td>—</td><td>—</td><td class="fail">❌ Missing — add en_IN</td></tr>
+      <tr><td><code>twitter:site</code></td><td>—</td><td>—</td><td class="fail">❌ Missing — add @eventguru77</td></tr>
+    </table>
+  </div>
+
+  <div class="sec-head"><h2>Performance Signals</h2></div>
+  <table>
+    <tr><th>Signal</th><th>Count</th><th>Target</th><th>Status</th></tr>
+    <tr><td>Render-blocking CSS</td><td>9</td><td>≤ 2</td><td class="fail">❌</td></tr>
+    <tr><td>Blocking scripts (no async/defer)</td><td>7</td><td>0</td><td class="fail">❌</td></tr>
+    <tr><td>Deferred/async scripts</td><td>2</td><td>All</td><td class="ok">✓</td></tr>
+    <tr><td>Preload hints (&lt;link rel="preload"&gt;)</td><td>0</td><td>≥ 1 (LCP image)</td><td class="fail">❌</td></tr>
+    <tr><td>Bootstrap 4.5.2 (stackpath)</td><td>1 JS ref</td><td>0</td><td class="fail">❌ Remove</td></tr>
+    <tr><td>Bootstrap 5.0.2 (jsdelivr)</td><td>2 refs</td><td>0</td><td class="fail">❌ Remove</td></tr>
+    <tr><td>Bootstrap 5.3.0 (jsdelivr)</td><td>1 CSS ref</td><td>1</td><td class="ok">✓ Keep</td></tr>
+    <tr><td>Owl Carousel CSS (loaded twice)</td><td>2 copies</td><td>1</td><td class="fail">❌ Remove cdnjs copy</td></tr>
+    <tr><td>Dead # links</td><td>12</td><td>0</td><td class="fail">❌</td></tr>
+    <tr><td>Images lazy-loaded</td><td>0 / 118</td><td>All non-hero</td><td class="fail">❌</td></tr>
+    <tr><td>Images with width/height</td><td>0 / 118</td><td>All</td><td class="fail">❌ CLS risk</td></tr>
+  </table>
+
+</div><!-- /technical -->
+
+<!-- ═══════════════════════════════════════════ SCHEMA -->
+<div id="tab-schema" class="panel">
+  <div class="sec-head"><h2>Schema Audit</h2><p>Current state · what was fixed · what remains</p></div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:18px 20px;margin-bottom:16px">
+    <table>
+      <tr><th>Schema Type</th><th>Status</th><th>Notes</th></tr>
+      <tr><td>LocalBusiness</td><td class="ok">✓ Present</td><td>—</td></tr>
+      <tr><td>FAQPage (9 questions)</td><td class="warn">⚠ Present — 1 duplicate Q</td><td>Q8 and Q9 both "how early" — remove Q9</td></tr>
+      <tr><td>schema image URL</td><td class="ok">✓ Fixed — 200 OK</td><td>Was 404, now epix-logo-01.webp</td></tr>
+      <tr><td><code>logo</code> field</td><td class="fail">✗ Missing</td><td>Add ImageObject</td></tr>
+      <tr><td><code>aggregateRating</code></td><td class="fail">✗ Missing</td><td>Needed for Google star snippets</td></tr>
+      <tr><td><code>priceRange</code></td><td class="fail">✗ Missing</td><td>Add "₹₹₹"</td></tr>
+      <tr><td>Service schema</td><td class="fail">✗ Missing</td><td>Describes the specific service offering</td></tr>
+      <tr><td>BreadcrumbList</td><td class="fail">✗ Missing</td><td>Home › Corporate Event Management in SERP</td></tr>
+    </table>
+  </div>
+
+  <div class="sec-head"><h2>Schema Fixes — Copy-Paste Ready</h2></div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:16px 18px;margin-bottom:14px">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px">Add to LocalBusiness block (merge, don't duplicate)</div>
+    <button class="copy-btn" onclick="cp('lb-fix')">Copy</button>
+    <pre id="lb-fix">"logo": {
+  "@type": "ImageObject",
+  "url": "https://epixentertainment.com/assets/images/logo/epix-logo-01.webp",
+  "width": 200,
+  "height": 60
+},
+"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.8",
+  "reviewCount": "45",
+  "bestRating": "5"
+},
+"priceRange": "₹₹₹",
+"sameAs": [
+  "https://www.facebook.com/p/Epix-Entertainment-100069111270881",
+  "https://www.instagram.com/epix_entertainment",
+  "https://au.linkedin.com/company/epix-entertainment",
+  "https://x.com/eventguru77"
+]</pre>
+  </div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:16px 18px;margin-bottom:14px">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px">New Service schema block (add separately)</div>
+    <button class="copy-btn" onclick="cp('svc-fix')">Copy</button>
+    <pre id="svc-fix">{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Corporate Event Management Services in Chennai",
+  "description": "End-to-end corporate event management services in Chennai — conferences, annual days, product launches, awards ceremonies, team-building, and trade shows.",
+  "provider": { "@type": "LocalBusiness", "name": "Epix Entertainment LLP", "url": "https://epixentertainment.com/" },
+  "areaServed": [{ "@type": "City", "name": "Chennai" }, { "@type": "Country", "name": "India" }],
+  "serviceType": "Corporate Event Management",
+  "url": "https://epixentertainment.com/corporate-event-management"
+}</pre>
+  </div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:16px 18px">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px">New BreadcrumbList schema block (add separately)</div>
+    <button class="copy-btn" onclick="cp('bc-fix')">Copy</button>
+    <pre id="bc-fix">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://epixentertainment.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Corporate Event Management", "item": "https://epixentertainment.com/corporate-event-management" }
+  ]
+}</pre>
+  </div>
+
+</div><!-- /schema -->
+
+<!-- ═══════════════════════════════════════════ FIX QUEUE -->
+<div id="tab-fixes" class="panel">
+  <div class="sec-head"><h2>Fix Queue — Prioritized</h2><p>All remaining issues ordered by priority and effort</p></div>
+
+  <div class="callout c-navy">
+    <strong>Progress:</strong> 7 fixes completed since last scan. 20 items remaining. P1 items (today) take under 30 minutes total and will move the overall score from 58 → ~66.
+  </div>
+
+  <table>
+    <tr>
+      <th>Priority</th>
+      <th>Fix</th>
+      <th>Effort</th>
+      <th>Score Impact</th>
+    </tr>
+    <!-- P1 -->
+    <tr>
+      <td><span class="badge b-red">P1 Today</span></td>
+      <td>Fix title: <code>Corporate Event Management Company in Chennai | Epix</code></td>
+      <td>2 min</td>
+      <td class="ok">+3</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-red">P1 Today</span></td>
+      <td>Replace 4 HR/payroll H3s with event-management bullets</td>
+      <td>15 min</td>
+      <td class="ok">+4</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-red">P1 Today</span></td>
+      <td>Remove duplicate FAQ Q9 (or replace with virtual events Q)</td>
+      <td>2 min</td>
+      <td class="ok">+2</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-red">P1 Today</span></td>
+      <td>Strip whitespace from OG title + Twitter title</td>
+      <td>2 min</td>
+      <td class="warn">+1</td>
+    </tr>
+    <!-- P2 -->
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Update meta description to optimized version (155 chars)</td>
+      <td>5 min</td>
+      <td class="ok">+3</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Fix service card link destinations (Product Launches, Awards, Team-Building)</td>
+      <td>20 min</td>
+      <td class="ok">+4</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Replace 8 "Read More" anchors with descriptive text</td>
+      <td>15 min</td>
+      <td class="warn">+2</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Fix <code>&lt;h2&gt;15+&lt;/h2&gt;</code> → wrap in <code>&lt;div&gt;</code></td>
+      <td>5 min</td>
+      <td class="warn">+2</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Add <code>logo</code>, <code>aggregateRating</code>, <code>priceRange</code> to LocalBusiness schema</td>
+      <td>10 min</td>
+      <td class="ok">+5</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Add Service schema + BreadcrumbList schema blocks</td>
+      <td>10 min</td>
+      <td class="ok">+4</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Add <code>og:locale="en_IN"</code> and <code>twitter:site="@eventguru77"</code></td>
+      <td>2 min</td>
+      <td class="warn">+1</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">P2 This Week</span></td>
+      <td>Fix <code>robots</code> meta: "follow, index" → "index, follow" (global template change)</td>
+      <td>2 min</td>
+      <td class="warn">+1</td>
+    </tr>
+    <!-- P3 -->
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Add <code>loading="lazy"</code> + <code>width</code>/<code>height</code> to all 118 images</td>
+      <td>2 hr</td>
+      <td class="ok">+8 (CWV)</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Add descriptive alt text to 21 empty-alt images</td>
+      <td>30 min</td>
+      <td class="warn">+2</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Add preload hint for LCP hero image</td>
+      <td>5 min</td>
+      <td class="warn">+2 (CWV)</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Add "corporate event planning agency" once in S5 body</td>
+      <td>2 min</td>
+      <td class="warn">+1</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Add <code>audio visual</code>, <code>ROI</code>, <code>checklist</code> in service descriptions</td>
+      <td>10 min</td>
+      <td class="warn">+1</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Fix FAQ numbering Q4/Q6/Q7 (add leading zeros)</td>
+      <td>5 min</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-gold">P3 This Month</span></td>
+      <td>Update OG description to compelling version with trust stats</td>
+      <td>5 min</td>
+      <td class="warn">+1</td>
+    </tr>
+    <!-- P4 -->
+    <tr>
+      <td><span class="badge b-green">P4 Backlog</span></td>
+      <td>Remove Bootstrap 4.5 + 5.0, add <code>defer</code> to all scripts</td>
+      <td>1 hr</td>
+      <td class="ok">+6 (perf)</td>
+    </tr>
+  </table>
+
+  <div class="callout c-green" style="margin-top:16px">
+    <strong>Projected score after P1 + P2 (all under 1 hour total):</strong> ~76/100 — a 25-point improvement from the pre-optimization baseline of 51, and an 18-point gain from the current 58.
+  </div>
+
+  <div style="background:#fff;border:1px solid var(--lgray);border-radius:10px;padding:16px 18px;margin-top:16px">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px">Projected Score After Each Phase</div>
+    <div class="sr" style="margin-bottom:12px"><span class="sr-lbl" style="width:160px">Baseline (pre-optimization)</span><div class="sr-bw"><div class="sr-b br" style="width:51%"></div></div><span class="sr-v fail">51/100</span></div>
+    <div class="sr" style="margin-bottom:12px"><span class="sr-lbl" style="width:160px">Current (live)</span><div class="sr-bw"><div class="sr-b ba" style="width:58%"></div></div><span class="sr-v warn">58/100 <span class="delta delta-up">▲+7</span></span></div>
+    <div class="sr" style="margin-bottom:12px"><span class="sr-lbl" style="width:160px">After P1 (today)</span><div class="sr-bw"><div class="sr-b ba" style="width:68%"></div></div><span class="sr-v warn">~66/100 <span class="delta delta-up">▲+8</span></span></div>
+    <div class="sr" style="margin-bottom:12px"><span class="sr-lbl" style="width:160px">After P1+P2 (this week)</span><div class="sr-bw"><div class="sr-b bg" style="width:76%"></div></div><span class="sr-v ok">~76/100 <span class="delta delta-up">▲+10</span></span></div>
+    <div class="sr"><span class="sr-lbl" style="width:160px">After P1–P4 (full)</span><div class="sr-bw"><div class="sr-b bg" style="width:85%"></div></div><span class="sr-v ok">~85/100 <span class="delta delta-up">▲+9</span></span></div>
+  </div>
+
+</div><!-- /fixes -->
+
+</main>
+</div><!-- /layout -->
+
+<script>
+function sw(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function setActive(el){
+  document.querySelectorAll('.sb-link').forEach(l=>l.classList.remove('active'));
+  el.classList.add('active');
+}
+function tog(head){
+  const card=head.parentElement;
+  const body=card.querySelector('.ic-body');
+  body.classList.toggle('vis');
+  card.classList.toggle('open');
+}
+function openCard(id){
+  const card=document.getElementById(id);
+  if(!card)return;
+  card.querySelector('.ic-body').classList.add('vis');
+  card.classList.add('open');
+  setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'start'}),80);
+}
+function cp(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  navigator.clipboard.writeText(el.textContent).then(()=>{
+    const b=event.target;
+    b.textContent='Copied!';
+    setTimeout(()=>b.textContent='Copy',1500);
+  });
+}
+// Intersection observer for sidebar active state
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      document.querySelectorAll(`.sb-link`).forEach(l=>{
+        if(l.getAttribute('onclick')&&l.getAttribute('onclick').includes("'"+id+"'"))
+          l.classList.add('active');
+        else l.classList.remove('active');
+      });
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('[id]').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
